@@ -16,8 +16,7 @@
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay 
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -76,8 +75,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.sdcardfs=true \
-    ro.config.calibration_cad=/system/etc/calibration_cad.xml
+    ro.sys.sdcardfs=true
 
 # Alipay / WeChat
 #PRODUCT_BOOT_JARS += \
@@ -98,7 +96,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    arcore \
     tinymix
 
 PRODUCT_COPY_FILES += \
@@ -110,8 +107,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9330.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
-    $(LOCAL_PATH)/audio/surround_sound_3mic/surround_sound_rec_AZ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg \
-    $(LOCAL_PATH)/configs/calibration_cad.xml:system/etc/calibration_cad.xml 
+    $(LOCAL_PATH)/audio/surround_sound_3mic/surround_sound_rec_AZ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -147,7 +143,7 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     libshims_camera \
     libshims_qcamera-daemon \
-    GoogleCameraMod
+    Snap
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
