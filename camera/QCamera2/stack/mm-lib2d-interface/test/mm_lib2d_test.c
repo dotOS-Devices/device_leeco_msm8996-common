@@ -186,7 +186,7 @@ void lib2d_dump_tga(void *addr, cam_format_t format, int width,
  **/
 lib2d_error lib2d_test_client_cb(void *userdata, int jobid)
 {
-  printf("%s %d, jobid=%d \n",  __LINE__, jobid);
+  fprintf("%s %d, jobid=%d \n",  __LINE__, jobid);
   return MM_LIB2D_SUCCESS;
 }
 
@@ -353,7 +353,7 @@ int main(int32_t argc, const char * argv[])
   img_lib_buffert  img_lib;
   img_lib.ptr = dlopen("libmmcamera_imglib.so", RTLD_NOW);
   if (!img_lib.ptr) {
-    printf("%s ERROR: couldn't dlopen libmmcamera_imglib.so: %s",
+    fprintf("%s ERROR: couldn't dlopen libmmcamera_imglib.so: %s",
        dlerror());
     return -1;
   }
@@ -433,13 +433,13 @@ int main(int32_t argc, const char * argv[])
       goto deinit;
     }
 
-    printf("%s %d yuv buffer properties : w=%d, h=%d, y_stride=%d, "
+    fprintf("%s %d yuv buffer properties : w=%d, h=%d, y_stride=%d, "
       "crcb_stride=%d, y_size=%d, crcb_size=%d, yuv_size=%d, "
       "crcb_offset=%d \n",
        __LINE__,
       width, height, y_plane_stride, crcb_plane_stride, y_plane_size,
       crcb_plane_size, yuv_size, y_plane_size_align);
-    printf("%s %d yuv buffer properties : fd=%d, ptr=%p, size=%d \n",
+    fprintf("%s %d yuv buffer properties : fd=%d, ptr=%p, size=%d \n",
        __LINE__, m_yuv_memHandle.fd, m_yuv_memHandle.vaddr,
       m_yuv_memHandle.length);
 
@@ -455,9 +455,9 @@ int main(int32_t argc, const char * argv[])
       goto deinit;
     }
 
-    printf("%s %d rgb buffer properties : w=%d, h=%d, stride=%d, size=%d \n",
+    fprintf("%s %d rgb buffer properties : w=%d, h=%d, stride=%d, size=%d \n",
        __LINE__, width, height, stride, rgb_size);
-    printf("%s %d rgb buffer properties : fd=%d, ptr=%p, size=%d \n",
+    fprintf("%s %d rgb buffer properties : fd=%d, ptr=%p, size=%d \n",
        __LINE__, m_rgb_memHandle.fd, m_rgb_memHandle.vaddr,
       m_rgb_memHandle.length);
 
@@ -535,7 +535,7 @@ release:
   img_lib.img_buffer_release(&m_yuv_memHandle);
 deinit:
   mm_lib2d_deinit(lib2d_handle);
-  printf("%s %d some error happened, tests completed = %d/%d \n",
+  fprintf("%s %d some error happened, tests completed = %d/%d \n",
      __LINE__, index - 1, total_tests);
   return -1;
 }
