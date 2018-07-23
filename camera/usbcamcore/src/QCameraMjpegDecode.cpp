@@ -175,7 +175,7 @@ MJPEGD_ERR mjpegDecode(
             char*   outputUVptr,
             int     outputFormat)
 {
-    int rc, c, i;
+    int rc, c;
     test_args_t* mjpegd;
     test_args_t  test_args;
 
@@ -208,6 +208,7 @@ MJPEGD_ERR mjpegDecode(
     }
     memset(thread_ctrl_blks, 0, sizeof(thread_ctrl_blk_t));
     // Initialize the blocks and kick off the threads
+		int i = 0;
         thread_ctrl_blks[i].tid = i;
         thread_ctrl_blks[i].p_args = &test_args;
         os_mutex_init(&thread_ctrl_blks[i].mutex);
