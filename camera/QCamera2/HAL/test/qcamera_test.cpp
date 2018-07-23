@@ -448,12 +448,15 @@ status_t CameraContext::encodeJPEG(SkWStream * stream,
     unsigned char *buff = (unsigned char*)malloc(len);
     if (!buff) {
         printf("Cannot allocate memory for buffer reading!\n");
+		fclose(fh);
         return BAD_VALUE;
     }
 
     size_t readSize = fread(buff, 1, len, fh);
     if (readSize != len) {
         printf("Reading error\n");
+		free(buff);
+		fclose(fh);
         return BAD_VALUE;
     }
 
@@ -461,6 +464,7 @@ status_t CameraContext::encodeJPEG(SkWStream * stream,
     if (ret != NO_ERROR) {
         printf("Cannot read sections from buffer\n");
         DiscardData();
+		fclose(fh);
         DiscardSections();
         return BAD_VALUE;
     }

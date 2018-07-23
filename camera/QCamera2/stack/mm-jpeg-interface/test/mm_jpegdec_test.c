@@ -197,6 +197,7 @@ int mm_jpegdec_test_read(mm_jpegdec_intf_test_t *p_obj)
   rc = mm_jpegdec_test_alloc(&p_obj->input, p_obj->use_ion);
   if (rc) {
     LOGE("Error");
+	fclose(fp);
     return -1;
   }
 

@@ -212,7 +212,6 @@ extern "C" int  usbcam_camera_device_open(
 
     if (camHal->fd <  0) {
         ALOGE("%s: Cannot open '%s'", __func__, dev_name);
-        free(camHal);
         rc = -1;
     }else{
         rc = 0;
@@ -2775,12 +2774,13 @@ static int readFromFile(char* fileName, char* buffer, int bufferSize)
     /* If file is bigger for given buffer, exit */
     if (fileSize > bufferSize){
         ALOGE("%s: Error %d > %d", __func__, fileSize, bufferSize);
+        fclose(fp);
         return bytesRead;
     }
 
     bytesRead = fread(buffer, 1, bufferSize, fp);
     ALOGD(" %s: bytesRead: %d", __func__, bytesRead);
-
+     fclose(fp);
     return bytesRead;
 }
 
