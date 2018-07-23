@@ -510,6 +510,7 @@ lib2d_error mm_lib2d_start_job(void *lib2d_obj_handle,
   if (p_out_frame == NULL) {
     free(p_in_frame);
     free(p_out_frame);
+	free(p_job_info);
     return MM_LIB2D_ERR_MEMORY;
   }
 

@@ -971,6 +971,7 @@ int32_t QCameraPostProcessor::processData(mm_camera_super_buf_t *frame)
             bufs = new mm_camera_buf_def_t[num_bufs];
             if (NULL == bufs) {
                 LOGE("Unable to allocate cached buffers");
+				free(pp_request_job);
                 return NO_MEMORY;
             }
 

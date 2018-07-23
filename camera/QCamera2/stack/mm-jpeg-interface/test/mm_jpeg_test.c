@@ -659,7 +659,7 @@ static int mm_jpeg_test_get_input(int argc, char *argv[],
     p_test->out_filename = out_files[i];
     fprintf(stderr, "Inf: %s Outf: %s\n", in_files[i], out_files[i]);
   }
-
+free(p_test);
   return 0;
 }
 
