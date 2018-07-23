@@ -31,7 +31,7 @@
 #include <string.h>
 #include <utils/Errors.h>
 #define PRCTL_H <SYSTEM_HEADER_PREFIX/prctl.h>
-#include "PRCTL_H"
+#include PRCTL_H
 
 // Camera dependencies
 #include "QCameraCmdThread.h"

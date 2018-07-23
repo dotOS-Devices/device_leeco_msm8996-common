@@ -36,7 +36,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #define IOCTL_H <SYSTEM_HEADER_PREFIX/ioctl.h>
-#include "IOCTL_H"
+#include IOCTL_H
 
 // Camera dependencies
 #include "cam_semaphore.h"

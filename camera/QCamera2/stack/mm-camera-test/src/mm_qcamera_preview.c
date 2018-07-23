@@ -32,7 +32,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <errno.h>
 #include <fcntl.h>
 #define MMAN_H <SYSTEM_HEADER_PREFIX/mman.h>
-#include "MMAN_H"
+#include MMAN_H
 
 // Camera dependencies
 #include "mm_qcamera_app.h"

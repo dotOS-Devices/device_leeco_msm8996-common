@@ -36,7 +36,7 @@
 #include <fcntl.h>
 #include <linux/msm_ion.h>
 #define MMAN_H <SYSTEM_HEADER_PREFIX/mman.h>
-#include "MMAN_H"
+#include MMAN_H
 
 // Camera dependencies
 #include "mm_qcamera_dbg.h"

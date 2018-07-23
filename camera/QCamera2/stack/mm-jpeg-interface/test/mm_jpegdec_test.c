@@ -31,7 +31,7 @@
 #include <pthread.h>
 #include <stdlib.h>
 #define TIME_H <SYSTEM_HEADER_PREFIX/time.h>
-#include "TIME_H"
+#include TIME_H
 
 // JPEG dependencies
 #include "mm_jpeg_interface.h"

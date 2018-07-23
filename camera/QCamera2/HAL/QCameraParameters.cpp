@@ -38,7 +38,7 @@
 #include <stdlib.h>
 #include <utils/Errors.h>
 #define SYSINFO_H <SYSTEM_HEADER_PREFIX/sysinfo.h>
-#include "SYSINFO_H"
+#include SYSINFO_H
 #include "gralloc_priv.h"
 #include "graphics.h"
 
