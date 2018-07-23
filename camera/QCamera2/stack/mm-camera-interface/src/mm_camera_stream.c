@@ -34,9 +34,9 @@
 #include <fcntl.h>
 #include <media/msm_media_info.h>
 #define TIME_H <SYSTEM_HEADER_PREFIX/time.h>
-#include TIME_H
+#include "TIME_H"
 #define IOCTL_H <SYSTEM_HEADER_PREFIX/ioctl.h>
-#include IOCTL_H
+#include "IOCTL_H"
 
 // Camera dependencies
 #include "cam_semaphore.h"

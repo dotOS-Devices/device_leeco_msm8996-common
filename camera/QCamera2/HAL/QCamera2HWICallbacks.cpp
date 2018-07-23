@@ -34,7 +34,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define STAT_H <SYSTEM_HEADER_PREFIX/stat.h>
-#include STAT_H
+#include "STAT_H"
 #include <utils/Errors.h>
 
 // Camera dependencies

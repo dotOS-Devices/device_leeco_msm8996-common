@@ -33,7 +33,7 @@
 #include <fcntl.h>
 #include <math.h>
 #define PRCTL_H <SYSTEM_HEADER_PREFIX/prctl.h>
-#include PRCTL_H
+#include "PRCTL_H"
 
 #ifdef LOAD_ADSP_RPC_LIB
 #include <dlfcn.h>

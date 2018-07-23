@@ -34,7 +34,7 @@
 #include <string.h>
 #include <linux/msm_ion.h>
 #define MMAN_H <SYSTEM_HEADER_PREFIX/mman.h>
-#include MMAN_H
+#include "MMAN_H"
 
 // JPEG dependencies
 #include "mm_jpeg_ionbuf.h"

@@ -39,7 +39,7 @@
 
 extern "C" {
 #define TIME_H <SYSTEM_HEADER_PREFIX/time.h>
-#include TIME_H
+#include "TIME_H"
 }
 
 // Camera dependencies

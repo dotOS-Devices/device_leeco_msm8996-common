@@ -35,7 +35,7 @@
 #include <stdlib.h>
 #include <utils/Errors.h>
 #define STAT_H <SYSTEM_HEADER_PREFIX/stat.h>
-#include STAT_H
+#include "STAT_H"
 
 // Camera dependencies
 #include "QCameraMuxer.h"
